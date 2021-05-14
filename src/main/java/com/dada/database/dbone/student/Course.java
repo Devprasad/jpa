@@ -34,11 +34,6 @@ public class Course {
 		return id;
 	}
 	
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
 	@Override
 	public String toString() {
 		return "Course [id=" + id + ", name=" + name + "]";
