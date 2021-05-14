@@ -1,4 +1,4 @@
-package com.dada.database.dbone.entity;
+package com.dada.database.dbone.jpa;
 
 import java.util.Date;
 

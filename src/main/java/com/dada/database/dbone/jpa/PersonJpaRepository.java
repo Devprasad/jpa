@@ -9,8 +9,6 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
-import com.dada.database.dbone.entity.Person;
-
 @Repository 
 @Transactional //needed for merge (update) queries
 public class PersonJpaRepository {

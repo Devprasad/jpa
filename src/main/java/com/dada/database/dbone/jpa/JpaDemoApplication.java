@@ -1,4 +1,4 @@
-package com.dada.database.dbone;
+package com.dada.database.dbone.jpa;
 
 import org.slf4j.LoggerFactory;
 
@@ -10,12 +10,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.dada.database.dbone.entity.Person;
-import com.dada.database.dbone.jpa.PersonJpaRepository;
 
 
-
-@SpringBootApplication
+//@SpringBootApplication
 public class JpaDemoApplication implements CommandLineRunner {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
