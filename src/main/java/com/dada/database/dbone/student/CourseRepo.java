@@ -13,6 +13,8 @@ public class CourseRepo {
 	@Autowired
 	EntityManager em;
 	
-	public void 
+	public Course findById(int id) {
+		return em.find(Course.class, id);
+	}
 
 }

@@ -16,6 +16,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class StudentApplication implements CommandLineRunner {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
+	
+	@Autowired
+	CourseRepo courseRepo;
 
 	public static void main(String[] args) {
 		SpringApplication.run(StudentApplication.class, args);
@@ -23,7 +26,7 @@ public class StudentApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		
+		logger.info("Course id: 101-> {}", courseRepo.findById(101));
 	}
 
 }
