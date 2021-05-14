@@ -25,6 +25,8 @@ public class StudentApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		logger.info("Course id: 101-> {}", courseRepo.findById(101));
+		logger.info("Add course id: 108-> {}", courseRepo.updateCourse(new Course(108, "Let us C")));
+		courseRepo.removeCourse(103);
 	}
 
 }

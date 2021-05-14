@@ -16,5 +16,14 @@ public class CourseRepo {
 	public Course findById(int id) {
 		return em.find(Course.class, id);
 	}
+	
+	public Course updateCourse(Course course) {
+		return em.merge(course);
+	}
+	
+	public void removeCourse(int id) {
+		Course course = findById(id);
+		em.remove(course);
+	}
 
 }
