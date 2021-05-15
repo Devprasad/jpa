@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@Transactional
 public class CourseRepo {
 	
 	@Autowired
@@ -17,11 +16,19 @@ public class CourseRepo {
 		return em.find(Course.class, id);
 	}
 	
+	@Transactional
 	public Course updateCourse(Course course) {
-		return em.merge(course);
+		if(course.getId() == 0) {
+			em.persist(course);
+		}
+		else {
+			return em.merge(course);
+		}
+		return course;
 	}
 	
-	public void removeCourse(int id) {
+	@Transactional
+	public void deleteById(int id) {
 		Course course = findById(id);
 		em.remove(course);
 	}
