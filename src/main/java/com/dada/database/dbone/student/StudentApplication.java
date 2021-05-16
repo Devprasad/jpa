@@ -15,6 +15,9 @@ public class StudentApplication implements CommandLineRunner {
 	
 	@Autowired
 	CourseRepo courseRepo;
+	
+	@Autowired
+	StudentRepo studentRepo;
 
 	public static void main(String[] args) {
 		SpringApplication.run(StudentApplication.class, args);
@@ -22,9 +25,15 @@ public class StudentApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		logger.info("Course id: 101-> {}", courseRepo.findById(101));
-		logger.info("Add course id: 108-> {}", courseRepo.updateCourse(new Course(108, "Let us C")));
-		courseRepo.deleteById(103);
+		/*
+		 * logger.info("Course id: 101-> {}", courseRepo.findById(101));
+		 * logger.info("Add course id: 108-> {}", courseRepo.updateCourse(new
+		 * Course(108, "Let us C"))); courseRepo.deleteById(103);
+		 * logger.info("Courses-> {}", courseRepo.findAll());
+		 * courseRepo.modifyCourseAfterPersist();
+		 */
+		// studentRepo.saveStudentWithPassport();
+		courseRepo.addreviewsForCourse();
 	}
 
 }
