@@ -47,5 +47,11 @@ class CourseRepoTest {
 		crepo.updateCourse(course);
 		assertEquals("Test Skills", crepo.findById(101).getName());
 	}
+	
+	@Test
+	void modifyCourseAfterPersistTest() {
+		crepo.modifyCourseAfterPersist();
+		assertEquals("Hello World", crepo.findById(3).getName());
+	}
 
 }
